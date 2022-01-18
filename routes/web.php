@@ -55,8 +55,8 @@ Route::get('cursos/{nomCurso}/{categoria?}', function($nomCurso, $categoria = nu
 
 Route::get('/', HomeController::class);
 
-Route::get('curso', [CursoController::class, 'index']);
+Route::get('cursos', [CursoController::class, 'index']);
 
-Route::get('cursos/{nomCurso}', [CursoController::class, 'create']);
+Route::get('cursos/{curso}', [CursoController::class, 'create']);
 
 Route::get('cursos/{nomCurso}/{categoria?}', [CursoController::class, 'show']); 
