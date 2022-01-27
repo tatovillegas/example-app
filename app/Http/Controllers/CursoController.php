@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StoreCurso;
+
 class CursoController extends Controller
 {
     public function index(){ //Metodo encargado de mostrar la pag principal
@@ -17,16 +19,8 @@ class CursoController extends Controller
         return view('cursos/create');
     }
 
-    public function store(request $request){
-        
-        $request->validate([
-            'name' => 'required',
-            'descripcion' => 'required',
-            'categoria' => 'required',
-        ]);
-        
-        
-        
+    public function store(StoreCurso $request){
+                    
         $curso = new Curso();
 
         $curso->name = $request->name;
