@@ -14,7 +14,7 @@
             <label>
                 Nombre:
                 <br>
-                <input type="text" name="name" value="{{odl('name', $curso->name)}}">
+                <input type="text" name="name" value="{{old('name', $curso->name)}}">
             </label>
 
             @error('name')
@@ -39,9 +39,10 @@
             <br>                    
             <label>
                 Categoria
-                <br>
-                <input type="text" name="categoria" value="{{('categoria', $curso->categoria)}}">
+                <br> 
+                <input type="text" name="categoria" value="{{old('categoria', $curso->categoria)}}">
             </label>
+
             @error('categoria')
             <br>
             <small>*{{$message}}</small>
