@@ -15,4 +15,4 @@
 
     {{$cursos->links()}}
 
-@endsection
+@endsection 

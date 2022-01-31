@@ -53,8 +53,6 @@ Route::get('cursos/{nomCurso}/{categoria?}', function($nomCurso, $categoria = nu
 
 //Ruta con un controlador
 
-Route::get('/', HomeController::class);
-
 /*
 Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
 
@@ -72,4 +70,8 @@ Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('curs
 
 */
 
+Route::get('/', HomeController::class)->name('home');
+
 Route::resource('cursos', CursoController::class);
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
